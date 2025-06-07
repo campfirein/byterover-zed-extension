@@ -111,4 +111,3 @@ Beyond automated rules, you can explicitly request memory operations:
 Add your custom rules to your workspace configuration in one of these locations:
 - `.zed/settings.json` (project-specific)
 - Global Zed settings (applies to all projects)
-- `.cursorrules` or similar files (depending on your editor)
