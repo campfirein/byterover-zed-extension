@@ -2,6 +2,8 @@
 
 This extension provides a Model Context Server for ByteRover, for use with the Zed AI assistant.
 
+ByteRover is a self-improving, shared memory layer that remembers your AI agent's coding experiences—enabling smarter, faster development and seamless collaboration across your entire dev team. [Learn more about ByteRover](https://www.byterover.dev/).
+
 ## Configuration
 
 To use the extension, you will need to config the context server by setting the `memory_workspace_key` and `user_email` in your Zed `<project-root/.zed/settings.json`
@@ -111,3 +113,9 @@ Beyond automated rules, you can explicitly request memory operations:
 Add your custom rules to your workspace configuration in one of these locations:
 - `.zed/settings.json` (project-specific)
 - Global Zed settings (applies to all projects)
+
+## Learn More
+
+For more information about ByteRover's features, pricing, and capabilities, visit the [ByteRover homepage](https://www.byterover.dev/).
+
+Explore how ByteRover can 10x your development efficiency with agentic memory management and team collaboration features.
