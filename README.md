@@ -118,6 +118,6 @@ Add your custom rules to your workspace configuration in one of these locations:
 
 ## Learn More
 
-For more information about ByteRover's features, pricing, and capabilities, visit the [ByteRover homepage](https://www.byterover.dev/).
+For more information about ByteRover's features, pricing, and capabilities, visit the [ByteRover homepage](https://www.byterover.dev/?source=zed).
 
 Explore how ByteRover can 10x your development efficiency with agentic memory management and team collaboration features.
