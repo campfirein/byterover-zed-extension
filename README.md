@@ -11,6 +11,7 @@ To use the extension, you will need to config the context server by setting the 
   "context_servers": {
     "mcp-server-byterover": {
       "settings": {
+        "source": "extension",
         "memory_workspace_key": "MEMORY_WORKSPACE_KEY",
         "user_email": "YOUR_EMAIL"
       }
