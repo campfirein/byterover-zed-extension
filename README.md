@@ -9,17 +9,16 @@ ByteRover is a self-improving, shared memory layer that remembers your AI agent'
 To use the extension:
 
 1. Visit [ByteRover](https://www.byterover.dev/?source=zed) to create a memory workspace
-2. Follow the Memory workspace quickstart guide to get your configuration values
-3. Configure the context server by setting the `memory_workspace_key` and `user_email` in your Zed `<project-root>/.zed/settings.json`
+2. Follow the Space start guide to get your configuration values
+3. Configure the context server by setting the `auth_header` in your Zed `<project-root>/.zed/settings.json`
 
 ```json
 {
   "context_servers": {
     "mcp-server-byterover": {
+      "source": "extension",
       "settings": {
-        "source": "extension",
-        "memory_workspace_key": "MEMORY_WORKSPACE_KEY",
-        "user_email": "YOUR_EMAIL"
+        "auth_header": "YOUR_SPACE_AUTH_HEADER"
       }
     }
   }
@@ -30,8 +29,8 @@ To use the extension:
 
 The ByteRover MCP server provides two core memory management tools:
 
-- **`search-memories`**: Search your curated knowledge base of past coding solutions and insights to find relevant help for your current task
-- **`create-memories`**: Capture key coding insights from human-agent interactions to help solve similar tasks in the future
+- **`byterover-retrieve-knowledge`**: Search your curated knowledge base of past coding solutions and insights to find relevant help for your current task
+- **`byterover-store-knowledge`**: Capture key coding insights from human-agent interactions to help solve similar tasks in the future
 
 ## Rule System for Memory Management
 
@@ -42,8 +41,8 @@ The ByteRover extension uses a flexible rule system that allows you to customize
 
 ```text
 # Important: Automated memory workflow
-always use search-memories tool to get the related context before any tasks
-always use create-memories to store all the critical informations after sucessfull tasks
+always use byterover-retrieve-knowledge tool to get the related context before any tasks
+always use byterover-store-knowledge to store all the critical informations after successful tasks
 ```
 
 This configuration ensures the agent:
@@ -58,14 +57,14 @@ You can configure different triggers for memory operations:
 
 ```text
 # Search memory before specific tasks
-always use search-memories before implementing new features
-always use search-memories when debugging complex issues
-always use search-memories for architecture decisions
+always use byterover-retrieve-knowledge before implementing new features
+always use byterover-retrieve-knowledge when debugging complex issues
+always use byterover-retrieve-knowledge for architecture decisions
 
 # Store memories based on task completion
-always use create-memories after successful bug fixes
-always use create-memories when completing code reviews
-always use create-memories for performance optimizations
+always use byterover-store-knowledge after successful bug fixes
+always use byterover-store-knowledge when completing code reviews
+always use byterover-store-knowledge for performance optimizations
 ```
 
 #### How to Use Memory
@@ -74,26 +73,26 @@ Create a `<project-root>/.rules` file and add your custom rules to control how t
 
 ```text
 # Context-specific memory usage
-use search-memories for similar technology stacks only
-use create-memories to store reusable patterns not full implementations
-focus create-memories on design decisions and lessons learned
+use byterover-retrieve-knowledge for similar technology stacks only
+use byterover-store-knowledge to store reusable patterns not full implementations
+focus byterover-store-knowledge on design decisions and lessons learned
 
 # Memory format guidelines
-store coding patterns and architectures in create-memories
-capture algorithm explanations and trade-offs in create-memories
-include dependency recommendations and gotchas in create-memories
+store coding patterns and architectures in byterover-store-knowledge
+capture algorithm explanations and trade-offs in byterover-store-knowledge
+include dependency recommendations and gotchas in byterover-store-knowledge
 ```
 
 #### Advanced Memory Workflows
 
 ```text
 # Conditional memory usage
-use search-memories when working with unfamiliar libraries
-use search-memories before refactoring legacy code
+use byterover-retrieve-knowledge when working with unfamiliar libraries
+use byterover-retrieve-knowledge before refactoring legacy code
 
 # Team collaboration
-use search-memories to maintain coding standards across team
-store create-memories with clear problem-solution mapping
+use byterover-retrieve-knowledge to maintain coding standards across team
+store byterover-store-knowledge with clear problem-solution mapping
 ```
 
 ### Explicit Memory Operations
