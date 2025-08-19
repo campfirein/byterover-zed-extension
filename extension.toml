@@ -1,7 +1,7 @@
 id = "mcp-server-byterover"
 name = "ByteRover MCP Server"
 version = "0.0.3"
-schema_version = 2
+schema_version = 1
 authors = ["Andy <andy@byterover.dev>"]
 description = "ByteRover - Agentic Memory Management"
 repository = "https://github.com/campfirein/byterover-zed-extension"
